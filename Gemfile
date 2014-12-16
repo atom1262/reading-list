@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'better_errors'          group: :doc
-gem 'binding_of_caller'          group: :doc
+gem 'better_errors',          group: :doc
+gem 'binding_of_caller',          group: :doc
 
 gem 'spring',        group: :development
