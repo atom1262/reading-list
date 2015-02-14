@@ -1,5 +1,9 @@
 <h1>Listing books</h1>
 
+<div>
+  <input type='text' class='search-form' value='<%= params[:keyword] %>' name='keyword' placeholder='Keyword' >
+</div>
+
 <table>
   <thead>
     <tr>
@@ -8,6 +12,7 @@
       <th>Description</th>
       <th>Amazon</th>
       <th>Have you read it?</th>
+      <th>Rating</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,8 +23,9 @@
         <td><%= link_to book.title, book %></td>
         <td><%= book.author %></td>
         <td><%= book.description %></td>
-        <td><%= book.amazon_id %></td>
+        <td><%= image_from_amazon(book.amazon_id) %></td>
         <td><%= book.finished? %></td>
+        <td><%= book.rating %></td>
       </tr>
     <% end %>
   </tbody>
